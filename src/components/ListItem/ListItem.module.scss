@@ -1,0 +1,193 @@
+@use "src/utils/global" as styles;
+
+.headCard {
+  display: flex;
+  justify-content: space-between;
+  min-height: 70px;
+  padding: 16px 18px 14px 16px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.studentName {
+  color: styles.$black;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 3px;
+}
+
+.gridWrapper {
+  display: grid;
+  align-items: center;
+  gap:20px;
+  grid-template-columns: styles.$gridTable
+}
+
+.mobileWrapper {
+  display: none;
+}
+
+.rowItems {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.itemWrapper {
+  height: 40px;
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.columnInfo {
+  color: styles.$black;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.avatar {
+  position: relative;
+  border-radius: 300px;
+  height: 40px;
+  width: 40px;
+}
+
+.avatarWrapper {
+  position: relative;
+  height: 40px;
+  width: 40px;
+}
+
+.avatarWrapper::before {
+  content: "";
+  position: absolute;
+  border: styles.$avatarBorder;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 300px;
+  z-index: 1;
+}
+
+.color {
+  height: 30px;
+  width: 30px;
+  border-radius: styles.$circleRadius;
+}
+
+.ColorMobile {
+  width: 12px;
+  height: 12px;
+  border-radius: styles.$circleRadius;
+  margin-right: 13px;
+}
+
+.ratingImg {
+  height: 10px;
+  width: 10px;
+  margin-right: 10px;
+}
+
+.ratingMobile {
+  color: styles.$black;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.bottomCard {
+  height: 100px;
+}
+
+.markerWrapper {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  margin-right: 13px;
+}
+
+.marker {
+  height: 5px;
+  width: 5px;
+  background-color: styles.$blue;
+  border-radius: styles.$circleRadius;
+}
+
+.mainInfo {
+  display: flex;
+  justify-content: space-between;
+  gap: 21px;
+}
+
+.decoratedList {
+  padding: 15px 0 15px 79px;
+
+  & li {
+    display: flex;
+    flex-direction: row;
+    color:  styles.$black;
+
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.deleteButton {
+  width: 30px;
+  height: 30px;
+  filter: styles.$dropShadow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: styles.$white;
+  border-radius: styles.$circleRadius;
+  cursor: pointer;
+
+  &:hover {
+    background-color: styles.$hover;
+  }
+
+  &:active {
+    background-color: styles.$active;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .itemWrapper {
+    height: auto;
+    border-radius: styles.$blockRadius;
+    background: styles.$white;
+    box-shadow: styles.$boxShadow;
+    margin-bottom: 10px;
+  }
+
+  .mobileWrapper {
+    width: 100%;
+    display: block;
+  }
+
+  .gridWrapper {
+    display: none;
+  }
+
+}

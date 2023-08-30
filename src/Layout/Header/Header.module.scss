@@ -1,0 +1,49 @@
+@use "src/utils/global" as styles;
+
+.headerWrapper {
+  height: 85.29px;
+  display: flex;
+  box-shadow: styles.$boxShadow;
+  background: styles.$white;
+  padding: 22px 123px 21.29px;
+  box-sizing: border-box;
+}
+
+.logo {
+  height: 42px;
+  width: 42px;
+}
+
+.title {
+  color: styles.$black;
+  font-feature-settings: 'clig' off, 'liga' off;
+  margin-left: 45px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 44px;
+}
+
+.username {
+  color: styles.$blue;
+}
+
+@media screen and (max-width:1440px) {
+
+  .headerWrapper {
+    padding: 22px 29px 21.29px;
+  }
+
+}
+
+@media screen and (max-width:768px) {
+
+  .title {
+    margin-left: 26px;
+  }
+
+  .author {
+    display: none;
+  }
+
+}

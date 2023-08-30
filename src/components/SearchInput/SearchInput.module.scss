@@ -1,0 +1,35 @@
+@use "src/utils/global" as styles;
+
+.search {
+  max-width: 980px;
+  width: calc(100% - 200px);
+  height: 48px;
+  display: flex;
+  gap: 16.48px;
+  border-radius: styles.$blockRadius;
+  background: styles.$white;
+  box-shadow: styles.$boxShadow;
+  padding: 15px 20px 14.48px;
+  box-sizing: border-box;
+}
+
+.searchImg {
+  height: 18.52px;
+  width: 18.52px;
+}
+
+.input {
+  width: 100%;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .search {
+    width: calc(100% - 69px);
+  }
+
+}

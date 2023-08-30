@@ -1,0 +1,101 @@
+@use "src/utils/global" as styles;
+
+.select {
+  width: 180px;
+  height: 48px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  background: styles.$white;
+  box-shadow: styles.$boxShadow;
+  padding: 14px 17px 14px 20px;
+  box-sizing: border-box;
+  border-radius: styles.$blockRadius;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.popUp {
+  position: absolute;
+  left:0;
+  top: 58px;
+  width: 180px;
+  border-radius: styles.$blockRadius;
+  background: styles.$white;
+  box-shadow: styles.$boxShadow;
+  padding: 0 5.21px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.option {
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-radius: styles.$optionRadius;
+  margin: 3px 0;
+  padding: 12px 13.44px 7px 17.79px;
+  box-sizing: border-box;
+
+  &:hover {
+    background: styles.$hoverOption;
+  }
+}
+
+.optionName {
+  color:#000;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px;
+}
+
+.selected {
+  background: styles.$hoverOption;
+}
+
+.check {
+  width: 10px;
+  height: 7.06px;
+}
+
+.sortImg {
+  width: 20px;
+  height: 20px;
+}
+
+.sortType {
+  color: styles.$black;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@media screen and (max-width: 768px) {
+
+  .sortType {
+    display: none;
+  }
+
+  .select {
+    padding: 14px 17px 14px 17px;
+    width: 54px;
+  }
+
+  .popUp {
+    right:0;
+    left: auto;
+  }
+
+}
